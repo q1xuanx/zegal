@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài đăng Facebook - Zegal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <script>
+      function switchTab(tab) {
+        document.getElementById("tab1").classList.add("hidden");
+        document.getElementById("tab2").classList.add("hidden");
+        document.getElementById("tab3").classList.add("hidden");
+
+        document.getElementById(tab).classList.remove("hidden");
+
+        document.getElementById("btn-tab1").classList.remove("border-b-2", "border-orange-500", "font-bold", "text-orange-500");
+        document.getElementById("btn-tab2").classList.remove("border-b-2", "border-orange-500", "font-bold", "text-orange-500");
+        document.getElementById("btn-tab3").classList.remove("border-b-2", "border-orange-500", "font-bold", "text-orange-500");
+
+        document.getElementById("btn-" + tab).classList.add("border-b-2", "border-orange-500", "font-bold", "text-orange-500");
+      }
+    </script>
+  </head>
+  <body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto mt-10 bg-white rounded-lg shadow-md p-4">
+      <!-- Header Tabs -->
+      <div class="flex border-b mb-4">
+        <button
+          id="btn-tab1"
+          onclick="switchTab('tab1')"
+          class="px-4 py-2 text-sm text-gray-600 hover:text-orange-500"
+        >
+          Giới thiệu Foxygen
+        </button>
+        <button
+          id="btn-tab2"
+          onclick="switchTab('tab2')"
+          class="px-4 py-2 text-sm text-gray-600 hover:text-orange-500"
+        >
+          Gặp gỡ đối tác
+        </button>
+        <button
+          id="btn-tab3"
+          onclick="switchTab('tab3')"
+          class="px-4 py-2 text-sm text-gray-600 hover:text-orange-500"
+        >
+          Booth Sự Kiện
+        </button>
+      </div>
+
+      <!-- Tab 1: Foxygen Post -->
+      <div id="tab1">
+        <!-- Header -->
+        <div class="flex items-center mb-4">
+          <img
+            src="logo-fb-zegal.jpg"
+            alt="Zegal"
+            class="w-10 h-10 rounded-full mr-3"
+          />
+          <div>
+            <h2 class="font-semibold text-gray-900">Zegal Vietnam</h2>
+            <p class="text-sm text-gray-500">
+              5 tháng 6, 2025 · <span class="text-xs">🌐</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="text-sm text-gray-800 mb-4 leading-relaxed">
+          Zegal chính thức ra mắt <strong>dịch vụ thi công trần xuyên sáng Foxygen</strong>,
+          đánh dấu bước tiến mới trong hành trình mang đến giải pháp chiếu sáng hiện đại,
+          thẩm mỹ và tiết kiệm cho không gian nội thất tại Việt Nam.
+        </div>
+
+        <div class="grid grid-cols-2 gap-1 mb-4">
+          <div class="relative w-full h-72">
+            <img
+              src="before.png"
+              alt="Trước"
+              class="w-full h-full object-cover rounded-md"
+            />
+            <div
+              class="absolute top-3 left-3 bg-white bg-opacity-90 text-[#FF6B00] text-base font-semibold px-3 py-1 rounded-full shadow-sm tracking-wide"
+            >
+              Trước
+            </div>
+          </div>
+
+          <div class="relative w-full h-72">
+            <img
+              src="after.png"
+              alt="Sau"
+              class="w-full h-full object-cover rounded-md"
+            />
+            <div
+              class="absolute top-3 left-3 bg-white bg-opacity-90 text-[#FF6B00] text-base font-semibold px-3 py-1 rounded-full shadow-sm tracking-wide"
+            >
+              Sau
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex justify-around text-sm text-gray-600 border-t pt-3 mt-4">
+          <button class="flex items-center gap-1 hover:text-blue-600 font-semibold">
+            <i class="fa-regular fa-thumbs-up"></i> Thích
+          </button>
+          <button class="flex items-center gap-1 hover:text-blue-600 font-semibold">
+            <i class="fa-regular fa-comment"></i> Bình luận
+          </button>
+          <button class="flex items-center gap-1 hover:text-blue-600 font-semibold">
+            <i class="fa-solid fa-link"></i> Sao chép
+          </button>
+          <button class="flex items-center gap-1 hover:text-blue-600 font-semibold">
+            <i class="fa-solid fa-share"></i> Chia sẻ
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 2: Partner Meeting -->
+      <div id="tab2" class="hidden">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="relative w-full">
+            <img
+              src="parner.png"
+              alt="Gặp đối tác"
+              class="w-full h-auto object-cover rounded-md"
+            />
+          </div>
+          <div class="flex items-center">
+            <h3 class="text-base font-semibold text-gray-800">
+              Hình ảnh gặp gỡ và tư vấn sản phẩm mới với đối tác chiến lược.
+            </h3>
+          </div>
+        </div>
+      </div>
+      <!-- Tab 3: Booth -->
+      <div id="tab3" class="hidden">
+        <div class="grid grid-cols-2 gap-2">
+          <div class="relative w-full">
+            <img
+              src="booth.png"
+              alt="Gặp đối tác"
+              class="w-full h-auto object-cover rounded-md"
+            />
+          </div>
+          <div class="flex items-center">
+            <h3 class="text-base font-semibold text-gray-800">
+              Booth sự kiện của Zegal
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
